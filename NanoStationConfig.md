@@ -14,7 +14,7 @@ This guide provides step-by-step instructions to configure the NanoStation Loco 
     4. Give the PC a static address by setting option "Use the following IP address:":
         - **IP Address**: `192.168.1.32`
         - **Subnet Mask**: `255.255.255.1`
-        - **Default Gateway**: `192.168.1.1`
+        - **Default Gateway**: `192.168.1.32`
     5. Push "OK" button when done.
 3. Make sure that only the Ethernet network is enabled. 
 4. Open a web browser and navigate to `http://192.168.1.20`.

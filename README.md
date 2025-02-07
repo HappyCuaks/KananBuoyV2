@@ -1,6 +1,24 @@
 # KananBuoyV2
 Kanan Buoy v2 brings a new approach using a videovigilance camera plus a Wireless NanoStation
 
+## Bill of Materials (BOM) for Prototype
+
+| **Component**                   | **Quantity** | **Price** (per unit) | **Total Price** | **Consumption** |
+|---------------------------------|--------------|----------------------|-----------------|-----------------|
+| Reolink Camera RLC-81PA         | 1            | 120                  | $XXX.XX         | 12W             |
+| TL-SF1005P                      | 1            | 33.7                 | $XXX.XX         | 7W              |
+| Battery 48V                     | 1            | 100                  | $XXX.XX         | N/A             |
+| Ethernet Cable 30 meters        | 1            | 30                   | $XXX.XX         | N/A             |
+| Ethernet Cable for Raspberry Pi | 1            | 5                    | $XXX.XX         | N/A             |
+| Raspberry Pi 4 Model B          | 1            | 60                   | $XXX.XX         | 3.5W            |
+| Raspberry Pi PoE+ Hat           | 1            | 30                   | $XXX.XX         | 4W              |
+| Ethernet Cable for Loco M5 Station | 1         | 5                    | $XXX.XX         | N/A             |
+| Loco M5 Station                 | 1            | 78.48                | $XXX.XX         | 6.5W            |
+| CN101A                          | 1            | 14                   | $XXX.XX         | N/A             |
+| 12V Battery 20000mAh            | 1            | 40                   | $XXX.XX         | N/A             |
+| Ubiquity Instant                | 1            | 40                   | $XXX.XX         | N/A             |
+
+
 ## Description of script
 Can you make a script in C++ that takes the images from he webcam Reolink RLC-81PA IP using the command http://192.168.1.55/cgi-bin/api.cgi?cmd=Snap&channel=0&rs=Takito&user=admin&password=jumanji3&width=3840&height=2160? . This script will forever run in a pc and will ask the camera to only take X pictures per day. Make it so the snap_times can be read every time before a picture is taken from an external file. You can choose the best format for this config file. Look into the command for all the paramenters that can be configured from the camera snapshot. This file and code will handle different cameras we must read from. Therefore, this file and this program needs to take into account that multiple cameras can be connected to the network and each of can have a different configuration.
 I am imagining that the code will have a sw unit reading the config file 3 snap_times per day, that can be configured as well in this config file. Default hardcoded values will be at 9, 13 and 18. If these refreshing snap_times are given in the file, take the new values. Every time we reach one of this refreshing snap_times, this sw unit must read from the config file. This file will contain the characteristics of every camera connected to the system. Which means that every refresh should check if new cameras are added or removed. 
